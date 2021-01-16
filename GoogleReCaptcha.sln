@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleReCaptcha.Web", "GoogleReCaptcha.Web\GoogleReCaptcha.Web.csproj", "{38A5F74E-2F63-4CDE-8975-A7C41125B44B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleReCaptcha.V3", "GoogleReCaptcha.V3\GoogleReCaptcha.V3.csproj", "{2AF7768A-CE84-4E9E-83EB-606D6FE8326C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38A5F74E-2F63-4CDE-8975-A7C41125B44B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38A5F74E-2F63-4CDE-8975-A7C41125B44B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38A5F74E-2F63-4CDE-8975-A7C41125B44B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38A5F74E-2F63-4CDE-8975-A7C41125B44B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AF7768A-CE84-4E9E-83EB-606D6FE8326C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AF7768A-CE84-4E9E-83EB-606D6FE8326C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AF7768A-CE84-4E9E-83EB-606D6FE8326C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AF7768A-CE84-4E9E-83EB-606D6FE8326C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20F9555A-B07F-482B-9E68-8D997613EF1D}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,44 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1> 
+</div>
+
+
+<h3>Subscribe Newsletter</h3>
+<form asp-page-handler="SubscribeNewsletter" method="post" id="newsletter-form">
+    <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" name="email" value="" class="form-control" />
+    </div>
+    <div class="form-group text-right">
+        <input type="submit" value="Submit" />
+    </div>
+</form>
+
+@section Scripts {
+    <script src="https://www.google.com/recaptcha/api.js?render=@Configuration["Google:RecaptchaV3SiteKey"]"></script>
+
+    <script>
+      
+        grecaptcha.ready(function () {
+            grecaptcha.execute("@Configuration["Google:RecaptchaV3SiteKey"]", { action: "newsletter" })
+                .then(function (token) {
+                    //double check
+                    $('#newsletter-form').prepend('<input type="hidden" name="token" value="' + token + '">');
+                    $.getJSON("@Url.Page("Index","RecaptchaVerify")&token=" + token, function (data) {
+                        debugger;
+                        $('#newsletter-form').find("input[type=submit]").prop("disabled", !data);
+                    });
+                });
+        });
+       
+
+    </script>    
+    
+
+}
