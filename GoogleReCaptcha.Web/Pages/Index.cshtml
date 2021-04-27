@@ -28,10 +28,8 @@
         grecaptcha.ready(function () {
             grecaptcha.execute("@Configuration["Google:RecaptchaV3SiteKey"]", { action: "newsletter" })
                 .then(function (token) {
-                    //double check
                     $('#newsletter-form').prepend('<input type="hidden" name="token" value="' + token + '">');
                     $.getJSON("@Url.Page("Index","RecaptchaVerify")&token=" + token, function (data) {
-                        debugger;
                         $('#newsletter-form').find("input[type=submit]").prop("disabled", !data);
                     });
                 });
